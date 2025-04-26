@@ -8,6 +8,7 @@ const app = express();
 //middleware....in betweeb req and res
 app.use(morgan('combined')); //we can give dev also
 //morgan is the logger
+app.use(express.json); //to recieve the payload as json
 
 
 
