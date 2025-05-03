@@ -30,7 +30,7 @@ class UsersService {
         return users;
     }
     async deleteUserById(id){
-        await UsersModel.deleteUserById({_id:id});
+        await UsersModel.findByIdAndDelete(id);
     }
 }
 const usersService = new UsersService();

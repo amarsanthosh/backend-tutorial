@@ -10,6 +10,7 @@ exports.registerUser = async function(req,res) {
         if(error !== undefined){
             throw new Error(error.details[0].message);
         }
+        console.log("tijos");
         await usersService.registerUser(value.email, value.password);
         res.status(201).json({
             status : true,
@@ -19,7 +20,7 @@ exports.registerUser = async function(req,res) {
     catch(error){
         res.status(400).json({
             status : false,
-            message : error.message
+            message :"error" +  error.message
         });
     }
 };
